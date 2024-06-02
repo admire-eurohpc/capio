@@ -45,6 +45,8 @@ class MPIBackend : public Backend {
         MPI_Finalize();
     }
 
+    inline bool store_file_in_memory() override { return true; }
+
     inline const std::set<std::string> get_nodes() override { return nodes; }
 
     inline void handshake_servers() override {
