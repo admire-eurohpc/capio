@@ -352,7 +352,10 @@ static int hook(long syscall_number, long arg0, long arg1, long arg2, long arg3,
 }
 
 static __attribute__((constructor)) void init() {
+#ifndef CAPIO_POSIX_FS
     init_client();
+#endif // CAPIO_POSIX_FS
+
     init_data_plane();
     init_filesystem();
     init_threading_support();

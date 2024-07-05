@@ -28,6 +28,7 @@ set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3")
 #####################################
 option(CAPIO_BUILD_TESTS "Build CAPIO test suite" FALSE)
 option(CAPIO_LOG "Enable capio debug logging" FALSE)
+option(CAPIO_POSIX_FS "Use FS backend on capio posix intercepting library")
 
 #####################################
 # CMake module imports
@@ -73,7 +74,11 @@ ENDIF (CAPIO_LOG)
 # Targets
 #####################################
 add_subdirectory(src/posix)
-add_subdirectory(src/server)
+
+#Build CAPIO Server only if choosen backend is not FS
+if(NOT CAPIO_POSIX_FS)
+    add_subdirectory(src/server)
+endif(NOT CAPIO_POSIX_FS)
 
 IF (CAPIO_BUILD_TESTS)
     message(STATUS "Building CAPIO test suite")
