@@ -1,14 +1,13 @@
 #ifndef CAPIO_SERVER_UTILS_TYPES_HPP
 #define CAPIO_SERVER_UTILS_TYPES_HPP
 
+#include <list>
 #include <string>
 #include <unordered_map>
 #include <unordered_set>
 #include <vector>
 
 #include "capio/queue.hpp"
-
-#include "utils/capio_file.hpp"
 
 #include "capio_file.hpp"
 
