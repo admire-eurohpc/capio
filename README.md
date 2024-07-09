@@ -3,6 +3,9 @@
 Cross-Application Programmable I/O. High-performance support for direct multi-rail, programmable and portable streaming
 across different distributed applications (e.g. MPI-app1 -> MPI-app2).
 
+The most up-to-date version of CAPIO is available in its official repo at the following link:
+[https://github.com/High-Performance-IO/capio](https://github.com/High-Performance-IO/capio)
+
 ## Report bugs + get help
 
 [Create a new issue](https://github.com/High-Performance-IO/capio/issues/new)
